@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f5f9;
+    color: black;
+}
+
+/* MENU NAVIGASI */
+header {
+    background: skyblue;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 15px skyblue;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.logo span,
+.teks span,
+.kotak span {
+    color: skyblue;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav button {
+    background: transparent;
+    border: none;
+    padding: 9px;
+    cursor: pointer;
+    color: skyblue;
+    font-size: 14px;
+}
+
+nav button:hover {
+    color: skyblue;
+}
+
+/* HALAMAN */
+.halaman {
+    display: none;
+    min-height: 82vh;
+    padding: 60px 8%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #f4f5f9, #e3e6ff);
+}
+
+.halaman.aktif {
+    display: flex;
+    animation: muncul 0.5s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HOME */
+.teks {
+    max-width: 550px;
+}
+
+.label {
+    color: skyblue;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.teks h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.teks h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.teks > p:not(.label) {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: black;
+}
+
+/* FOTO PROFIL */
+.foto img {
+    width: 200px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid skyblue;
+    box-shadow: 0 10px 30px #00000020;
+}
+
+/* KONTEN */
+.kotak {
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+}
+
+.kotak h1 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.kotak > p {
+    line-height: 1.8;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* KARTU */
+.kartu-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.kartu {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0000000c;
+    margin: 15px auto;
+    max-width: 400px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.kartu-container .kartu {
+    width: 250px;
+}
+
+.kartu:hover {
+    transform: translateY(-5px);
+}
+
+.kartu h3 {
+    color: skyblue;
+    margin-bottom: 12px;
+}
+
+.kartu p {
+    color: black;
+    line-height: 1.7;
+}
+
+.catatan {
+    font-size: 13px;
+}
+
+/* TOMBOL */
+.tombol {
+    border: none;
+    border-radius: 8px;
+    background: skyblue;
+    color: white;
+    padding: 13px 23px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.tombol:hover {
+    background: skyblue;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+    background:  skyblue;
+    color: white;
+    padding: 22px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .halaman {
+        flex-direction: column;
+        padding: 45px 6%;
+    }
+
+    .teks h1 {
+        font-size: 32px;
+    }
+
+    .foto img {
+        width: 220px;
+        height: 280px;
+    }
+
+    .kotak h1 {
+        font-size: 29px;
+    }
+
+    .kartu-container .kartu {
+        width: 100%;
+        max-width: 320px;
+    }
+}
